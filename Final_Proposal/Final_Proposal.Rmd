@@ -1,0 +1,32 @@
+---
+title: "Final Proposal- Data 608"
+author: "OMER OZEREN"
+output:
+  word_document:
+    toc_depth: '3'
+  html_document:
+    df_print: paged
+    toc_depth: '3'
+  rmdformats::readthedown:
+    code_folding: hide
+    highlight: kate
+    toc_depth: 3
+always_allow_html: yes
+---
+
+## Mission Statement
+My goal is to explore signals (variables) correlated to increased suicide rates among different cohorts globally.I'll try to find out if there is any correlation between suicide rate over time and other factors, such as economical(GDP, etc) ,educational(highest level of schooling completed),age,gender,etnicity .In addition, I'll try to find out changes of suicide rate over time (peak years, countries with increasing/decreasing suicide rate)
+
+## Data
+
+I will source the data from kaggle datasets.
+
+- https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016
+
+## Tools
+Technologies that will be used:
+
+- Plotly
+- Shiny App
+- R
+
