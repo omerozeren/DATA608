@@ -7,7 +7,7 @@ library(shinydashboard)
 library(shinyjs)
 library(shinythemes)
 
-df<-read.csv("https://raw.githubusercontent.com/olgashiligin/data608/master/final_project/master.csv")
+df<-read.csv("https://raw.githubusercontent.com/omerozeren/DATA608/master/Final_Project/master.csv")
 head(df)
 str(df)
 df$year<-as.factor(df$year)
