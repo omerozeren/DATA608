@@ -2,32 +2,26 @@
 title: "Final Project Introduction"
 author: "OMER OZEREN"
 output:
-  word_document:
-    toc_depth: '3'
   html_document:
     df_print: paged
     toc_depth: '3'
-  rmdformats::readthedown:
-    code_folding: hide
-    highlight: kate
-    toc_depth: 3
 always_allow_html: yes
 ---
   
-  Title: Suicide Rate Globally Correlation Relationship 
+Title: Suicide Rate  Correlation Relationship 
 
 Author: Omer Ozeren
 
 GitHub (link to the project): <https://github.com/omerozeren/DATA608/tree/master/Final_Project>
   
-  Shinyapps (link to the deployed project): http://omerozeren.shinyapps.io/final_project/
+Shinyapps (link to the deployed project): http://omerozeren.shinyapps.io/final_project/
   
-  Course: Knowledge and Visual Analytics (Data 608)
+Course: Knowledge and Visual Analytics (Data 608)
 
 Purpose 
 --------
   The purpose of final project is to visualize suicide rates and correlations between
-  GDP per capita by country among different cohorts globally.
+  GDP per capita by country and profile of suicides among different cohorts globally.
 
 Visualization
 --------------
@@ -35,14 +29,15 @@ Visualization
   The project includes the following aspects of the Analysis of Global
 Suicide Rate:
   
-  -  Correlation of suicide rate and GDP per capita by country and in aggregationfrom 1985
+  -  Correlation of suicide rate and GDP per capita by country from 1985
 to 2016 years.
 
--  Dynamic profile of suicides by country from 1985 to 2016 years (animation added).
+-  Suicide rate by country from 1985 to 2016 years (Slides tab added).
 
--  Suicide rate distribution by country (World Choropleth Map).
+-  Suicide rate distribution by country (World Geographical Map).
 
-Insights
+
+Analysis
 ---------
   
   -  Suicide rate shows decreasing trend globally.
@@ -55,15 +50,20 @@ Insights
 
 -  The highest suicide rate is in Lithuania - 40, the rest countries in the list of the countries with the highest suicide rate are developing northern countries (except Sri Lanka).
 
+
 Limitations
 -----------
   
-  Suicide rate statistics is not available for several countries.
+  The "Data" Tab consumes extra time to load project data(takes 1-1.5 minutes to see the tab result)
 
 
-Visualization Tools Used: Shiny App, Plotly API, R
+Tools Used:
+-----------
 
-Terminology Used:
+Shiny App, Plotly API, R
+
+Correlation Input Variable Used:
+--------------------------------
   
   - GDP per Capita - is a measure of a country's economic output that
 accounts for its number of people. It divides the country's gross
@@ -71,7 +71,6 @@ domestic product by its total population.
 
 - Suicide Rate - number of suicides per 100k of population.
 
-Possible Further Analysis: correlation of number of sunny days per year vs suicide rate by country.
 
 Data Sources
 -------------

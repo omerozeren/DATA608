@@ -12,7 +12,7 @@ head(df)
 str(df)
 df$year<-as.factor(df$year)
 
-shinyUI(navbarPage(title = "Suicide Rate  Correlation Relationship Globally",
+shinyUI(navbarPage(title = "Suicide Rate  Correlation Relationship",
                    theme = shinytheme("lumen"),
                    # Upload introduction rmd file
                    tabPanel("Project Introduction",
@@ -58,7 +58,7 @@ shinyUI(navbarPage(title = "Suicide Rate  Correlation Relationship Globally",
                               plotlyOutput('geomap')
                             )
                    ),
-                   tabPanel("Data Page", tableOutput("data")),
+                   tabPanel("Data", tableOutput("data")),
                    
                    # tags$style-s below is to overwrite shiny default colours
                    tags$style(
