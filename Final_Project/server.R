@@ -6,7 +6,7 @@ library(shiny)
 library(countrycode)
 
 shinyServer(function(input, output, session) {
-  globaldf<-read.csv("https://raw.githubusercontent.com/omerozeren/DATA608/master/Final_Project/master.csv")
+  globaldf<-read.csv("https://raw.githubusercontent.com/olgashiligin/data608/master/final_project/master.csv")
   
   
   output$data <- renderTable({
