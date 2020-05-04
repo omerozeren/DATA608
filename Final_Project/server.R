@@ -13,9 +13,8 @@ shinyServer(function(input, output, session) {
     globaldf
   })
   
-  # suicide by gender graph
   
-  # preparing data set for the graph
+  # preparing data 
   
   output$bygender <- renderPlotly({
     df<-globaldf
@@ -31,7 +30,7 @@ shinyServer(function(input, output, session) {
     df_q3$age[df_q3$age == "5-14 years"] <- "05-14 years"
     df_q3$age <- as.factor(df_q3$age)
     
-    # creating the animated suicide profile graph
+    # creating  suicide profile graph
     
     df_q3 %>%
       plot_ly(
@@ -65,13 +64,12 @@ shinyServer(function(input, output, session) {
   })
   
   
-  # for display of geo map in the "Map" tab
+  # for display of geo map 
   output$geomap <- renderPlotly({
     df<-globaldf
     
     
-    #  creating a map (average suicide rate by contries)
-    # preparing data set for the graph
+    #  creating a map 
     
     df_g1<- df %>%
       group_by(country) %>%
@@ -82,10 +80,10 @@ shinyServer(function(input, output, session) {
     df_g1$code<-countrycode(c(df_g1$country), origin = "country.name", destination = 'genc3c')
     
     
-    # light grey boundaries
+    #  grey boundaries
     l <- list(color = toRGB("grey"), width = 0.5)
     
-    # specify map projection/options
+    # specify map projection
     g <- list(
       showframe = FALSE,
       showcountries=TRUE,
@@ -115,9 +113,8 @@ shinyServer(function(input, output, session) {
     
     df<-globaldf
     
-    # creating a graph which shows average suicide rate vs GDP per capita by country by year
     
-    # preparing data set for the graph
+    # preparing data set 
     
     df_g2<- df %>%
       group_by(country, year) %>%
@@ -144,15 +141,14 @@ shinyServer(function(input, output, session) {
              yaxis = list(side = 'left', title = 'suicide rate', showgrid = FALSE, zeroline = FALSE),
              yaxis2 = list(side = 'right', overlaying = "y", title = 'GDP per capita', showgrid = FALSE, zeroline = FALSE))
   })
-  # # creating a graph which shows average suicide rate vs GDP per capita by country by year (total)
+  # # creating a graph for average suicide rate vs GDP per capital
   
   output$GdpVsSuicideTotal <- renderPlotly({
     
     df<-globaldf
     
-    # creating a graph which shows avg suicide rate vs GDP per capita by country by year
     
-    # preparing data set for the graph
+    # preparing data set
     
     df_g2<- df %>%
       group_by(year) %>%

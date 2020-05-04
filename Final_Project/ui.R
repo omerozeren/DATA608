@@ -12,22 +12,21 @@ head(df)
 str(df)
 df$year<-as.factor(df$year)
 
-shinyUI(navbarPage(title = "Analysis Of Suicide Rate Among Different Cohorts Globally",
+shinyUI(navbarPage(title = "Suicide Rate  Correlation Relationship Globally",
                    theme = shinytheme("lumen"),
-                   # first tab to display project info of the project markdown file
-                   tabPanel("Project Information",
+                   # Upload introduction rmd file
+                   tabPanel("Project Introduction",
                             fluidPage(
-                              includeMarkdown("project_information.Rmd"))),
-                   # next tab to the right contains sidebar with controls and chart 
+                              includeMarkdown("introduction.Rmd"))),
                    tabPanel("GDP vs Suicide Rate",
                             
-                            fluidPage(   # this left side panel consists of two panels either of which is visible depending on selected sub tab of the main panel on the right
+                            fluidPage(
                               sidebarPanel(
                                 # this panel contains chart controls
                                 conditionalPanel(condition="input.gdppanels==1",
-                                                 selectInput(inputId="selectedCountry", label="Select Country", choices=unique(df$country), selected="Albania")
+                                                 selectInput(inputId="selectedCountry", label="Select Country", choices=unique(df$country), selected="United States")
                                 ),
-                                # empty panel, tags$style added to ovewrite shiny's default and make the panel invisible
+
                                 conditionalPanel(tags$style(".well {background-color:white; border:none; box-shadow:none}"), condition="input.gdppanels==2")
                               ),
                               mainPanel(
@@ -42,13 +41,12 @@ shinyUI(navbarPage(title = "Analysis Of Suicide Rate Among Different Cohorts Glo
                             
                    ),
                    
-                   # next tab contains sidebar panel on its left and main panel taking the rest of the page
-                   tabPanel("Dynamic Profile Of Suicides",
+                   tabPanel("Suicides Profile",
                             # left side
                             sidebarLayout(
                               sidebarPanel(
                                 # chart controls
-                                selectInput(inputId="cntry", label="Select Country", choices=unique(df$country), selected="Albania")
+                                selectInput(inputId="cntry", label="Select Country", choices=unique(df$country), selected="United States")
                               ),
                               # main panel
                               mainPanel(plotlyOutput('bygender'))
@@ -60,7 +58,6 @@ shinyUI(navbarPage(title = "Analysis Of Suicide Rate Among Different Cohorts Glo
                               plotlyOutput('geomap')
                             )
                    ),
-                   # similar to the above, displaying input data used. Because of size of the data, it takes a while for the page content to load up
                    tabPanel("Data Page", tableOutput("data")),
                    
                    # tags$style-s below is to overwrite shiny default colours

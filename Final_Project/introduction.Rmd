@@ -1,25 +1,33 @@
 ---
-  title: "project_information"
-author: "Omer Ozeren"
-date: "12/05/2019"
-output: md_document
+title: "Final Project Introduction"
+author: "OMER OZEREN"
+output:
+  word_document:
+    toc_depth: '3'
+  html_document:
+    df_print: paged
+    toc_depth: '3'
+  rmdformats::readthedown:
+    code_folding: hide
+    highlight: kate
+    toc_depth: 3
+always_allow_html: yes
 ---
   
-  
-  Title: Analysis Of Suicide Rate Among Different Cohorts Globally 
+  Title: Suicide Rate Globally Correlation Relationship 
 
-Author: Olga Shiligin 
+Author: Omer Ozeren
 
-GitHub (link to the project): <https://github.com/olgashiligin/data608/tree/master/final_project>
+GitHub (link to the project): <https://github.com/omerozeren/DATA608/tree/master/Final_Project>
   
-  Shinyapps (link to the deployed project): https://olgashiligin.shinyapps.io/suicide_study/
+  Shinyapps (link to the deployed project): http://omerozeren.shinyapps.io/final_project/
   
   Course: Knowledge and Visual Analytics (Data 608)
 
 Purpose 
 --------
-  The purpose of the project is to find signals correlated to
-increased suicide rates among different cohorts globally.
+  The purpose of final project is to visualize suicide rates and correlations between
+  GDP per capita by country among different cohorts globally.
 
 Visualization
 --------------
@@ -83,12 +91,6 @@ Data Sources
   
   <https://plot.ly/r/animations/>
   
-  <https://stackoverflow.com/questions/31914161/how-to-convert-rmd-into-md-in-r-studio>
-  
   <https://plotly-r.com/animating-views.html>
   
-  https://www.youtube.com/watch?v=VQdA7XoA-lY
 
-https://beta.rstudioconnect.com/content/2671/Combining-Shiny-R-Markdown.html
-
-https://stackoverflow.com/questions/36472001/call-a-rmarkdown-report-in-the-shiny-application/36476563#36476563

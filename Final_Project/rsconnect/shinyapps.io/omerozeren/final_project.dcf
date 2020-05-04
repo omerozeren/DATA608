@@ -1,0 +1,12 @@
+name: final_project
+title:
+username:
+account: omerozeren
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2239746
+bundleId: 3102649
+url: https://omerozeren.shinyapps.io/final_project/
+when: 1588618589.21081
+asMultiple: FALSE
+asStatic: FALSE
